@@ -9,32 +9,79 @@
 import UIKit
 
 class InfiniteTabBarController: UIViewController {
+    // MARK: Properties
     var viewControllers: [UIViewController]?
     var selectedViewController: UIViewController?
+    
+    private lazy var tabBar: InfiniteTabBar = self.createInfiniteTabBar()
+    private lazy var contentView: UIView = self.createContentView()
+    
     //var selectedIndex: Int
-    //var tabBar: InfiniteTabBar
+    //var tabBar: InfiniteTabBar { get }
 
+    // MARK: Object Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nc = UITabBarController()
-
-        // Do any additional setup after loading the view.
+        guard let count = viewControllers?.count, count > 0 else {
+            fatalError("There is no viewControllers")
+        }
+        tabBar.count = count
+        addSubviews()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layoutSubviews()
+    }
+    // MARK: Methods
+    // Initialize Content View
+    private func createContentView() -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Initialize Tab Bar
+    private func createInfiniteTabBar() -> InfiniteTabBar {
+        let tabBar = InfiniteTabBar()
+        tabBar.translatesAutoresizingMaskIntoConstraints = false
+        return tabBar
     }
-    */
 
+    // Add subviews
+    private func addSubviews() {
+        view.addSubview(contentView)
+        view.addSubview(tabBar)
+    }
+    // Layout subviews
+    private func layoutSubviews() {
+        let safeArea = view.safeAreaLayoutGuide
+        
+        // layout Content View
+        /// Top
+        contentView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+        
+        /// leading
+        contentView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+        
+        /// trailing
+        contentView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
+        
+        /// bottom
+        contentView.bottomAnchor.constraint(equalTo: tabBar.topAnchor).isActive = true
+        
+        // layout Tab Bar
+        /// Height
+        tabBar.heightAnchor.constraint(equalToConstant: InfiniteTabBar.height).isActive = true
+    
+        /// leading
+        tabBar.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+        
+        /// trailing
+        tabBar.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
+        
+        /// bottom
+        tabBar.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
+    }
 }
