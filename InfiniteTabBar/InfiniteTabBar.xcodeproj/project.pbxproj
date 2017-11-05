@@ -10,10 +10,11 @@
 		F36C15831F9C967A00760962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15821F9C967A00760962 /* AppDelegate.swift */; };
 		F36C15851F9C967A00760962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15841F9C967A00760962 /* ViewController.swift */; };
 		F36C158A1F9C967A00760962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36C15891F9C967A00760962 /* Assets.xcassets */; };
-		F36C158D1F9C967A00760962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36C158B1F9C967A00760962 /* LaunchScreen.storyboard */; };
 		F36C15981F9C967A00760962 /* InfiniteTabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15971F9C967A00760962 /* InfiniteTabBarTests.swift */; };
 		F36C15A31F9C967A00760962 /* InfiniteTabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15A21F9C967A00760962 /* InfiniteTabBarUITests.swift */; };
 		F36C15B11F9CA04D00760962 /* InfiniteTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15B01F9CA04D00760962 /* InfiniteTabBarController.swift */; };
+		F39A317A1FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A31791FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift */; };
+		F39A317C1FAECD93002A9775 /* InfiniteTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A317B1FAECD93002A9775 /* InfiniteTabBarCell.swift */; };
 		F3E89DE21F9CBECB005E9703 /* InfiniteTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E89DE11F9CBECB005E9703 /* InfiniteTabBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +40,6 @@
 		F36C15821F9C967A00760962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36C15841F9C967A00760962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F36C15891F9C967A00760962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F36C158C1F9C967A00760962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F36C158E1F9C967A00760962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F36C15931F9C967A00760962 /* InfiniteTabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteTabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36C15971F9C967A00760962 /* InfiniteTabBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarTests.swift; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		F36C15A21F9C967A00760962 /* InfiniteTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarUITests.swift; sourceTree = "<group>"; };
 		F36C15A41F9C967A00760962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F36C15B01F9CA04D00760962 /* InfiniteTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarController.swift; sourceTree = "<group>"; };
+		F39A31791FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarFlowLayout.swift; sourceTree = "<group>"; };
+		F39A317B1FAECD93002A9775 /* InfiniteTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarCell.swift; sourceTree = "<group>"; };
 		F3E89DE11F9CBECB005E9703 /* InfiniteTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,10 +104,11 @@
 				F36C15821F9C967A00760962 /* AppDelegate.swift */,
 				F36C15841F9C967A00760962 /* ViewController.swift */,
 				F36C15891F9C967A00760962 /* Assets.xcassets */,
-				F36C158B1F9C967A00760962 /* LaunchScreen.storyboard */,
 				F36C158E1F9C967A00760962 /* Info.plist */,
 				F36C15B01F9CA04D00760962 /* InfiniteTabBarController.swift */,
 				F3E89DE11F9CBECB005E9703 /* InfiniteTabBar.swift */,
+				F39A31791FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift */,
+				F39A317B1FAECD93002A9775 /* InfiniteTabBarCell.swift */,
 			);
 			path = InfiniteTabBar;
 			sourceTree = "<group>";
@@ -235,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36C158D1F9C967A00760962 /* LaunchScreen.storyboard in Resources */,
 				F36C158A1F9C967A00760962 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +265,8 @@
 			files = (
 				F36C15B11F9CA04D00760962 /* InfiniteTabBarController.swift in Sources */,
 				F3E89DE21F9CBECB005E9703 /* InfiniteTabBar.swift in Sources */,
+				F39A317A1FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift in Sources */,
+				F39A317C1FAECD93002A9775 /* InfiniteTabBarCell.swift in Sources */,
 				F36C15851F9C967A00760962 /* ViewController.swift in Sources */,
 				F36C15831F9C967A00760962 /* AppDelegate.swift in Sources */,
 			);
@@ -298,17 +302,6 @@
 			targetProxy = F36C159F1F9C967A00760962 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F36C158B1F9C967A00760962 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F36C158C1F9C967A00760962 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F36C15A51F9C967A00760962 /* Debug */ = {
