@@ -16,8 +16,25 @@ class InfiniteTabBarFlowLayout: UICollectionViewFlowLayout {
         return itemsCount
     }
     private func itemsWidth() -> CGFloat {
-        return UIScreen.main.bounds.width / CGFloat(itemsCount(at: 0))
+        guard itemsCount(at: 0) > InfiniteTabBar.defaultMaxTabCount else {
+            return UIScreen.main.bounds.width / CGFloat(itemsCount(at: 0))
+        }
+        return UIScreen.main.bounds.width / CGFloat(InfiniteTabBar.defaultMaxTabCount)
     }
+
+    private func extraWidth() -> CGFloat {
+        let extraCount = itemsCount(at: 0) - InfiniteTabBar.defaultMaxTabCount
+        return CGFloat(extraCount) * CGFloat(itemsWidth())
+    }
+    
+    override var collectionViewContentSize: CGSize {
+        guard itemsCount(at: 0) > InfiniteTabBar.defaultMaxTabCount else {
+            return super.collectionViewContentSize
+        }
+        return CGSize(width: UIScreen.main.bounds.width + extraWidth(),
+                      height: InfiniteTabBar.height)
+    }
+
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var attributes = [UICollectionViewLayoutAttributes]()
         guard itemsCount(at: 0) > 0 else {
@@ -32,6 +49,7 @@ class InfiniteTabBarFlowLayout: UICollectionViewFlowLayout {
         }
         return attributes
     }
+
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
         attribute.frame = CGRect(x: itemsWidth() * CGFloat(indexPath.row),
