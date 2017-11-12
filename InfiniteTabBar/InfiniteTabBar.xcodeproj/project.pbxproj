@@ -13,6 +13,7 @@
 		F36C15981F9C967A00760962 /* InfiniteTabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15971F9C967A00760962 /* InfiniteTabBarTests.swift */; };
 		F36C15A31F9C967A00760962 /* InfiniteTabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15A21F9C967A00760962 /* InfiniteTabBarUITests.swift */; };
 		F36C15B11F9CA04D00760962 /* InfiniteTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C15B01F9CA04D00760962 /* InfiniteTabBarController.swift */; };
+		F370A8E31FB6D1EB005A03F8 /* InfiniteTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370A8E21FB6D1EB005A03F8 /* InfiniteTabBarItem.swift */; };
 		F39A317A1FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A31791FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift */; };
 		F39A317C1FAECD93002A9775 /* InfiniteTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A317B1FAECD93002A9775 /* InfiniteTabBarCell.swift */; };
 		F3E89DE21F9CBECB005E9703 /* InfiniteTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E89DE11F9CBECB005E9703 /* InfiniteTabBar.swift */; };
@@ -48,6 +49,7 @@
 		F36C15A21F9C967A00760962 /* InfiniteTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarUITests.swift; sourceTree = "<group>"; };
 		F36C15A41F9C967A00760962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F36C15B01F9CA04D00760962 /* InfiniteTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarController.swift; sourceTree = "<group>"; };
+		F370A8E21FB6D1EB005A03F8 /* InfiniteTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarItem.swift; sourceTree = "<group>"; };
 		F39A31791FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarFlowLayout.swift; sourceTree = "<group>"; };
 		F39A317B1FAECD93002A9775 /* InfiniteTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBarCell.swift; sourceTree = "<group>"; };
 		F3E89DE11F9CBECB005E9703 /* InfiniteTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabBar.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				F3E89DE11F9CBECB005E9703 /* InfiniteTabBar.swift */,
 				F39A31791FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift */,
 				F39A317B1FAECD93002A9775 /* InfiniteTabBarCell.swift */,
+				F370A8E21FB6D1EB005A03F8 /* InfiniteTabBarItem.swift */,
 			);
 			path = InfiniteTabBar;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				F36C15B11F9CA04D00760962 /* InfiniteTabBarController.swift in Sources */,
 				F3E89DE21F9CBECB005E9703 /* InfiniteTabBar.swift in Sources */,
+				F370A8E31FB6D1EB005A03F8 /* InfiniteTabBarItem.swift in Sources */,
 				F39A317A1FAEB428002A9775 /* InfiniteTabBarFlowLayout.swift in Sources */,
 				F39A317C1FAECD93002A9775 /* InfiniteTabBarCell.swift in Sources */,
 				F36C15851F9C967A00760962 /* ViewController.swift in Sources */,
